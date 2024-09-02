@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = parseInt(prompt("enter the value "));
+        var y = parseInt(prompt("enter the value "));
+
+        for (x; x <= y; x++) {
+            var amg = 0;
+            var temp = x;
+            var len = x.toString().length;
+
+            while (temp > 0) {
+                var d = temp % 10;
+                amg += Math.pow(d, len);
+                temp = Math.floor(temp / 10);
+            }
+            if (amg == x) {
+                document.write(amg + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>
