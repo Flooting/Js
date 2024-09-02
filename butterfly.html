@@ -9,23 +9,21 @@
 
 <body>
   <script>
-    for (var i = 1; i <= 10; i++) {
-      for (var j = 1; j <= 10; j++) {
-        if (((j = 1 || j == 10) && (i >= 1)) ||
-          ((j == 2 || j == 9) && (i > 1 && 1 < 10)) ||
-          ((j == 3 || j == 8) && (1 > 2 && i < 9)) ||
-          ((j == 4 || j == 7) && (i > 3 && i < 8)) ||
-          ((j == 5 || j == 6) && (i > 4 && i < 7))) {
-          document.write("*");
-        }
-        else {
-          document.write("&nbsp");
-        }
+    for (var i = 1; i <= 5; i++) {
+      for (var j = 1; j <= 5; j++) {
+        document.write("*");
       }
-      document.write('<br>');
+     for (var j=i+1;j<=5;j++){
+      document.write("&nbsp")
+     }
+     for (var j=i+1;j<=5;j++){
+      document.write ("&nbsp")
+     }
+     for (var j=1;j<=i;j++){
+      document.write("&nbsp")
+     }
 
     }
-
   </script>
 </body>
 

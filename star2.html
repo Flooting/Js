@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,42 +10,43 @@
             font-family: monospace;
             white-space: pre;
             line-height: 1.5;
-        color: orange;   
-        text-align: center; 
-        margin-top: 250px;
-        font-weight: 200;
+            color: orange;
+            text-align: center;
+            margin-top: 250px;
+            font-weight: 200;
 
         }
-        *{
+
+        
+        * {
             font-size: larger;
-            font-weight: 160px ;
-            
+            font-weight: 160px;
+
 
         }
     </style>
 </head>
+
 <body>
-    <div class="butterfly" id="butterfly"></div>
+    <div class="butterfly"  id="butterfly"></div>
 
     <script>
         function generateButterflyPattern() {
             let pattern = '';
-            const size = 5;  // Adjust size for larger or smaller patterns
-            
-            // Upper part of the butterfly
+            const size = 5;
             for (let i = 1; i <= size; i++) {
                 pattern += '*'.repeat(i) + ' '.repeat(2 * (size - i)) + '*'.repeat(i) + '\n';
             }
-            
-            // Lower part of the butterfly
+
             for (let i = size; i >= 1; i--) {
                 pattern += '*'.repeat(i) + ' '.repeat(2 * (size - i)) + '*'.repeat(i) + '\n';
             }
-            
+
             return pattern;
         }
-        
+
         document.getElementById('butterfly').textContent = generateButterflyPattern();
     </script>
 </body>
+
 </html>
